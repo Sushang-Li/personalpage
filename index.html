@@ -41,6 +41,17 @@
     .achievements {
         margin-top: 10px;
     }
+
+    .zoom-image {
+        transition: transform 0.3s ease, transform-origin 0.3s ease; /* 添加过渡效果 */
+        position: relative; /* 确保图片定位相对于容器 */
+        z-index: 1; /* 提升层级 */
+    }
+
+    .zoom-image:hover {
+        transform: scale(1.2); /* 鼠标悬停时放大图片 */
+        z-index: 10; /* 放大时提升层级，避免被其他元素覆盖 */
+    }
 </style>
 
 </head>
@@ -181,7 +192,7 @@
             <div class="row">
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="images/project.jpg" class="zoom-image"/>
                     </div>
                     <div class="project-info">
                         <h3>Received the Honourable Mention for MCM/ICM in 2023.</h3>
