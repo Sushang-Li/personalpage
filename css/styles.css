@@ -286,16 +286,16 @@ footer {
 }
 
 #lead-content h1 {
-    color: #fff;
+    color: #000000;
     font-weight: 900;
-    font-size: 5em;
+    font-size: 7em;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.09em;
     line-height: 0.9em
 }
 
 #lead-content h2 {
-    color: #a0cfee;
+    color: #9400D3;
     font-weight: 500;
     font-size: 2.25em;
     margin-bottom: 15px
@@ -309,7 +309,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(33, 125, 187, 0.8);
+    /* background: rgba(33, 125, 187, 0.1); */
     z-index: 1
 }
 
@@ -321,7 +321,7 @@ footer {
     text-align: center;
     z-index: 10;
     bottom: 15px;
-    color: #fff
+    color: #9400D3
 }
 
 #lead-down span {
