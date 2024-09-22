@@ -302,20 +302,31 @@
                 <p>
                     Supervisor: Erick Purwanto [Erick.Purwanto@xjtlu.edu.cn]
                 </p>
-                <!-- 数字标号列表为一级，数字标号列表下有二级列表 -->
                 <ol>
-                    <p><strong>Replication and Improvement of the Cervical Spine Fracture Detection Research. Publish a paper at PlatCon.</strong></p>
+                    <strong>Replication and Improvement of the Cervical Spine Fracture Detection Research (Publish a paper at PlatCon)</strong>
                     <ul>
-                        <li style="font-size: 15.5px;">Using multiple pre-processing techniques such as windowing will effectively modify the image size and additionally
-                            optimize the image contrast and brightness.</li>
-                        <li style="font-size: 15.5px;">Using 3D U-Net + EfficientNet-B5 model for cervical spine segmentation. Then, using CrackNet + BiLSTM Model
-                            for Cervical Fracture Classification.</li>
+                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                            Implemented advanced pre-processing techniques, e.g., windowing, image cropping with Yolov5, and voxel clipping, to enhance image quality and prepare data for analysis.
+                        </li>
+                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                            Developed a two-stage approach for cervical spine CT scan analysis, achieving a combined accuracy of 94.9%, and a BCE logits coefficient of 0.20 ± 0.01.
+                        </li>
+                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                            Utilized UNet-EfficientNet in Stage 1 for precise CT image segmentation, attaining an accuracy of 99.91%. Applied CrackNet-LSTM in Stage 2 for accurate cervical spine fracture detection, achieving an accuracy of 94.9%.
+                        </li>
                     </ul>
                     <!-- <p><strong>At the HubMAP Competition, use YOLOv8 for human blood vessel segmentation and make pseudo labels for retraining. Trying to combine SAM with YOLOv8 for segmentation.</strong></p> -->
-                    <p><strong>During the MedFMC, trained a few-shot model with a Swin-transformer backbone and developing patch-based preprocessing methods to enhance model performance. Publish a paper at CyberC.</strong></p>
+                    <strong>Few-Shot Multi-Label Medical Image Classification Research (Publish a paper at CyberC)</strong>
                     <ul>
-                        <li style="font-size: 15.5px;">Training a few-shot classification model using the VPT model with a backbone of Swin-transformer.</li>
-                        <li style="font-size: 15.5px;">Developed Patch-based preprocessing technique for the model, enhancing the model’s ability to detect minute details and achieving significant improvements in mAP and AUC on two datasets compared to the baseline.</li>
+                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                            Training a few-shot classification model using the VPT model with a backbone of Swin-transformer. Evaluated the model's robustness using three datasets: ChestDR (chest X-ray), Endo (genuine colonoscopy), and Colon (colon cells).
+                        </li>
+                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                            Developed multi-level attention patch-based preprocessing technique for the model, enhancing the model's ability to detect minute details, e.g., overlapping information.
+                        </li>
+                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                            Improved mAP (1.2%-1.7%) and AUC (4.1%-5.2%) on two datasets (ChestDR, and Endo), compared to the baseline.
+                        </li>
                     </ul>
                 </ol>
             </div>
@@ -330,29 +341,37 @@
                     <p>Thomas Selig [Thomas.Selig@xjtlu.edu.cn]</p>
                 </p>
                 <ol>
-                    <p><strong> Phase One: Created a programming tutor bot based on open-source projects tailored for pair programming, winning the
-                        second prize at the XJTLU Student Research-Oriented Learning Summit</strong></p>
+                    <strong> 
+                        Phase One: Created a programming tutor bot based on open-source projects tailored for programming and algorithm; winning the
+                        second prize at the XJTLU Student Research-Oriented Learning Summit
+                    </strong>
                     <ul>
-                        <li style="font-size: 15.5px;">Utilized Prompt Engineering to call OpenAI APIs, creating an educational chatbot for programming. Implemented
+                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">Utilized Prompt Engineering to call OpenAI APIs, creating an educational chatbot for programming with 8 different topics. Implemented
                             Chain of Thought and Moderation to prevent non-educational output, making it suitable for beginners.</li>
-                        <li style="font-size: 15.5px;">Tested the bot with an Indonesian student to verify its effectiveness and multilingual capabilities.</li>
+                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                            The bot was tested with an Indonesian student across four topics with two languages, achieving a 91% effectiveness rate, which demonstrates its pedagogical value and multilingual capabilities.
+                        </li>
                     </ul>
-                    <p><strong>Phase Two: Developed algorithm visualization module based on bot responses to aid teaching.</strong></p>
+                    <strong>
+                        Phase Two: Developed algorithm visualization module based on bot responses to aid teaching; received the Global Impact Grants 2023-24 from Advance HE with present findings
+                    </strong>
                     <ul>
-                        <li style="font-size: 15.5px;">Created seven algorithm visualizations using d3.node, including for loops and array sorting lessons. Modified
-                            previous React-based TypeScript project to enable response-driven visualizations. Developed a static website with
-                            embedded chatbot to package programming knowledge and LLM into courses.</li>
-                        <li style="font-size: 15.5px;">Conducted 2 controlled experiments with pre-A-level students and 2 controlled experiments with 120
-                            non-programming background students from the CPT206 course at XJTLU, demonstrating improved learning
-                            efficiency with the chatbot. Preparing a publication based on these findings and secured Advance HE Global Impact
-                            Grants 2023-24.</li>
+                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">Created seven algorithm visualizations using d3.node, including for loops and array sorting lessons. 
+                            Refactored the backend logic of a React-based TypeScript project to synchronize bot responses with dynamic visualizations, leading to the development of VisualCodeChat, a teaching-focused chatbot platform. 
+                             </li>
+                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                            Developed a pilot MOOC with VisualCodeChat and integrated our chatbot into an existing mature platform to create VisualCodeMOOC. </li>
+                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;"> 
+                            Conducted 2 controlled experiments consecutively with 16 preA high school students and 88 non-programming background students from the CPT206 course. 
+                            Reliable questionnaire results (Cronbach's alpha: 0.891) and a high average score of 4.18, supported by qualitative coding, demonstrate the bot met all evaluation criteria.
+                        </li>
                     </ul>
-                    <p><strong>Phase Three: Further research on the effectiveness of our design compared to standard GPT in teaching graph
-                        algorithms.</strong></p>    
+                    <strong>Phase Three: Researched the effectiveness and HCI criterias of our design compared to standard GPT in teaching graph algorithms.
+                        </strong>
                     <ul>
-                        <li style="font-size: 15.5px;">Iterated three graph algorithm visualizations using d3.force, including DFS-based cycle and connectivity checks, and
+                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">Iterated three graph algorithm visualizations using d3.force, including DFS-based cycle and connectivity checks, and
                             BFS-based connected components check. Added data recording and user-friendly guidance modules.</li>
-                        <li style="font-size: 15.5px;">Conducted 8 controlled experiments to verify its effectiveness: experiments involved 330 students with varying
+                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">Conducted 8 controlled experiments to verify its effectiveness: experiments involved 330 students with varying
                             programming backgrounds from the CPT204 course at XJTLU. One group used our bot for the set learning tasks,
                             while the other group used AI based on the original GPT. The results showed a significant improvement in learning
                             efficiency for students using the chatbot. The project was showcased at EdVenture and internal sharing seminars.</li>
