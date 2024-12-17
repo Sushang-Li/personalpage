@@ -14,6 +14,9 @@
     <link href="css/styles.css" rel="stylesheet">
     
     <style>
+        html {
+      scroll-behavior: smooth;
+    }
     .course-list {
         columns: 2;
         -webkit-columns: 2;
@@ -168,7 +171,7 @@
                         <span class="custom-font-SmileySansOblique" style="color: #9400D3;">
                             霆霓快雨 
                         </span>
-                        describes the scene of a summer thunderstorm followed by immediate clear skies, which also can be referred to as 
+                        describes the scene of a summer thunderstorm followed by <span class="custom-font-SmileySansOblique" style="color: #9400D3;">immediate</span> clear skies, which also can be referred to as 
                         <span class="custom-font-SmileySansOblique" style="color: #9400D3;">
                             Nimble as Lightning
                         </span>.
@@ -249,7 +252,7 @@
         <h2 class="heading">Publications</h2>
         
         <div class="education-block">
-            <h3>VisualCodeMOOC: A Course Platform for Algorithms and Data Structures Integrating a Conversational Agent for Enhanced Learning Through Dynamic Visualizations</h3>
+            <h3 id="VisualCodeMOOC">VisualCodeMOOC: A Course Platform for Algorithms and Data Structures Integrating a Conversational Agent for Enhanced Learning Through Dynamic Visualizations</h3>
             <h4><strong style="color: #333333;">Mingyuan Li</strong>; Duan Wang; Erick Purwanto; Thomas Selig; Qing Zhang; Hai-Ning Liang</h4>
             <div class="gpa">
                 <p><i>SoftwareX (IF: 2.8) </i>[Under Review: Submitted Nov. 2024]</p>
@@ -257,7 +260,7 @@
         </div>
 
         <div class="education-block">
-            <h3>Chatbot-Powered Learning for Sustainable Education in Programming</h3>
+            <h3 id="Global">Chatbot-Powered Learning for Sustainable Education in Programming</h3>
             <h4>Erick Purwanto; Na Li; Qing Zhang; Thomas Selig; Yihong Wang; Teng Ma; Filbert Juwono; Pengfei Fan, (student member) <strong style="color: #333333;">Mingyuan Li</strong> and Duan Wang </h4>
             <div class="gpa">
                 <p><i>Global Impact Grants 2024 - Education for Sustainable Development and Building Future Leaders</i></p>
@@ -266,7 +269,7 @@
         </div>
 
         <div class="education-block">
-            <h3>Patch-Based Multi-Level Attention Mechanism for Few-Shot Multi-Label Medical Image
+            <h3 id="Patch-Based">Patch-Based Multi-Level Attention Mechanism for Few-Shot Multi-Label Medical Image
                 Classification</h3>
             <h4><strong style="color: #333333;">Mingyuan Li</strong>; Yichuan Wang; Junfeng Huang; Erick Purwanto; Ka Lok Man</h4>
             <div class="gpa">
@@ -277,7 +280,7 @@
         </div>
 
         <div class="education-block">
-            <h3>Cervical Spine Fracture Detection Through Two-Stage Approach of Mask Segmentation and
+            <h3 id="Cervical Spine">Cervical Spine Fracture Detection Through Two-Stage Approach of Mask Segmentation and
                 Windowing Based on Convolutional Neural Network</h3>
             <h4>Doyeon Kim; Xujia Ning; Kaicheng Liang; Yi Ni; Duan Wang; <strong style="color: #333333;">Mingyuan Li </strong>; Yichuan Wang; Erick Purwanto; Ka Lok Man</h4>
             <div class="gpa">
@@ -398,7 +401,7 @@
                     <p><a href="https://scholar.xjtlu.edu.cn/en/persons/ErickPurwanto" title="Access the detailed profile" target="_blank"> Erick Purwanto</a></p>
                 </p>
                 <ol>
-                    <strong>Replication and Improvement of the Cervical Spine Fracture Detection Research (Publish a paper at PlatCon)</strong>
+                    <strong>Replication and Improvement of the Cervical Spine Fracture Detection Research </strong><a href="#Cervical Spine">(Publish a paper at PlatCon) </a>
                     <ul>
                         <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
                             Implemented advanced pre-processing techniques, e.g., windowing, image cropping with Yolov5, and voxel clipping, to enhance image quality and prepare data for analysis.
@@ -411,7 +414,7 @@
                         </li>
                     </ul>
                     <!-- <p><strong>At the HubMAP Competition, use YOLOv8 for human blood vessel segmentation and make pseudo labels for retraining. Trying to combine SAM with YOLOv8 for segmentation.</strong></p> -->
-                    <strong>Few-Shot Multi-Label Medical Image Classification Research (Publish a paper at CyberC)</strong>
+                    <strong>Few-Shot Multi-Label Medical Image Classification Research </strong> <a href="#Patch-Based"> (Publish a paper at CyberC)</a>
                     <ul>
                         <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
                             Training a few-shot classification model using the VPT model with a backbone of Swin-transformer. Evaluated the model's robustness using three datasets: ChestDR (chest X-ray), Endo (genuine colonoscopy), and Colon (colon cells).
@@ -448,7 +451,7 @@
                         </li>
                     </ul>
                     <strong>
-                        Phase Two: Developed algorithm visualization module based on bot responses to aid teaching; received the Global Impact Grants 2023-24 from Advance HE with present findings
+                        Phase Two: Developed algorithm visualization module based on bot responses to aid teaching; received the <a href="#Global">Global Impact Grants 2023-24</a> from Advance HE with present findings
                     </strong>
                     <ul>
                         <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">Created seven algorithm visualizations using d3.node, including for loops and array sorting lessons. 
@@ -459,6 +462,9 @@
                         <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;"> 
                             Conducted 2 controlled experiments consecutively with 16 preA high school students and 88 non-programming background students from the CPT206 course. 
                             Reliable questionnaire results (Cronbach's alpha: 0.891) and a high average score of 4.18, supported by qualitative coding, demonstrate the bot met all evaluation criteria.
+                        </li>
+                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;"> 
+                           Authered a manuscript based on the current findings, currently under review by <a href="#VisualCodeMOOC">SoftwareX (IF: 2.8)</a>.
                         </li>
                     </ul>
                     <strong>Phase Three: Researched the effectiveness and HCI criterias of our design compared to standard GPT in teaching graph algorithms.
