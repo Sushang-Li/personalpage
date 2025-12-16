@@ -385,6 +385,28 @@ footer {
     max-width: 1000px
 }
 
+/* Research experience images: centered, consistent, responsive */
+.research-image-group {
+    margin: 18px auto 5px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.research-image-item {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* 仅在 Research Experience 中的图片增加轻微放大效果，避免影响其它版块 */
+.research-image-group .research-image-item.zoom-image:hover {
+    transform: translateY(-6px) scale(1.5);
+}
+
 #experience-timeline:before {
     position: absolute;
     content: '';
