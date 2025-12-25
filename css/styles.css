@@ -752,6 +752,33 @@ footer {
     padding: 0 0 0 15px
 }
 
+/* Credly Badge Styling */
+.credly-badge-container {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px 0;
+}
+
+.credly-badge-container > div {
+    display: inline-block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.credly-badge-container > div:hover {
+    transform: translateY(-5px);
+}
+
+.credly-badge-container iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.credly-badge-container iframe:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
 @media only screen and (max-width: 750px) {
 
     #experience-timeline:before,
@@ -806,6 +833,11 @@ footer {
 
     #about p {
         text-align: left
+    }
+
+    .credly-badge-container {
+        margin: 15px 0;
+        padding: 10px 0;
     }
 }
 
