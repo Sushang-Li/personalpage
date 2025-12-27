@@ -17,7 +17,8 @@
   "author": "Ryan Fitzgerald",
   "license": "MIT",
   "dependencies": {
-    "@vercel/analytics": "^1.4.0"
+    "@vercel/analytics": "^1.4.0",
+    "@vercel/speed-insights": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
