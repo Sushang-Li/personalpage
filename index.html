@@ -6,108 +6,187 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet"> -->
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    
+
     <style>
         html {
-      scroll-behavior: smooth;
-    }
-    .course-list {
-        columns: 2;
-        -webkit-columns: 2;
-        -moz-columns: 2;
-        column-gap: 20px;
-        list-style-type: none;
-        padding: 0;
-    }
-    .course-list li {
-        padding: 2px 0;
-        display: flex;
-        justify-content: space-between;
-    }
-    .course-grade {
-        /* background-color: #f0f0f0; */
-        border-radius: 12px;
-        padding: 2px 8px;
-        color: #333;
-        margin-left: 5px;
-        min-width: 30px;
-        text-align: center;
-    }
-    .gpa {
-        margin-top: 20px;
-    }
-    .achievements {
-        margin-top: 10px;
-    }
+            scroll-behavior: smooth;
+        }
 
-    .zoom-image {
-        transition: transform 0.3s ease, box-shadow 0.3s ease; 
-        position: relative; 
-        z-index: 1; 
-        border-radius: 6px;
-    }
+        .course-list {
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+            column-gap: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
 
-    /* 改为“抬起+阴影”高亮效果，避免图片放大溢出外层 box */
-    .zoom-image:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-        z-index: 10; 
-    }
-    @font-face {
+        .course-list li {
+            padding: 2px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .course-grade {
+            /* background-color: #f0f0f0; */
+            border-radius: 12px;
+            padding: 2px 8px;
+            color: #333;
+            margin-left: 5px;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .gpa {
+            margin-top: 20px;
+        }
+
+        .achievements {
+            margin-top: 10px;
+        }
+
+        .zoom-image {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            z-index: 1;
+            border-radius: 6px;
+        }
+
+        /* 改为“抬起+阴影”高亮效果，避免图片放大溢出外层 box */
+        .zoom-image:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+            z-index: 10;
+        }
+
+        @font-face {
             font-family: 'SmileySansOblique';
             src: url('libs/SmileySans-Oblique.ttf.woff2') format('woff2');
-    }
+        }
 
-    /* lato-300 - latin */
-    @font-face {
-    font-display: swap; 
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 300;
-    src: url('../fonts/lato-v24-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-    /* lato-regular - latin */
-    @font-face {
-    font-display: swap; 
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-    /* lato-700 - latin */
-    @font-face {
-    font-display: swap; 
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-    /* lato-900 - latin */
-    @font-face {
-    font-display: swap; 
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 900;
-    src: url('../fonts/lato-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
+        /* lato-300 - latin */
+        @font-face {
+            font-display: swap;
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 300;
+            src: url('../fonts/lato-v24-latin-300.woff2') format('woff2');
+            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
 
-    .custom-font-SmileySansOblique {
-        font-family: 'SmileySansOblique', sans-serif;
-    }
+        /* lato-regular - latin */
+        @font-face {
+            font-display: swap;
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            src: url('../fonts/lato-v24-latin-regular.woff2') format('woff2');
+            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
 
-    #transcriptImage {
+        /* lato-700 - latin */
+        @font-face {
+            font-display: swap;
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            src: url('../fonts/lato-v24-latin-700.woff2') format('woff2');
+            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* lato-900 - latin */
+        @font-face {
+            font-display: swap;
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 900;
+            src: url('../fonts/lato-v24-latin-900.woff2') format('woff2');
+            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        .custom-font-SmileySansOblique {
+            font-family: 'SmileySansOblique', sans-serif;
+        }
+
+        #transcriptImage {
             display: none;
             margin-top: 20px;
             width: 100%;
             max-width: 600px;
         }
-</style>
+
+        /* Research item wrapper: for individual research sub-items with independent image positioning */
+        .research-item-wrapper {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        /* Research image positioned on the left, aligned with its subtitle */
+        .research-image-left {
+            position: absolute;
+            left: -400px;
+            top: 0;
+            width: 300px;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 20px;
+            z-index: 200;
+        }
+
+        .research-image-left .research-image-item {
+            max-width: 280px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .research-image-left .research-image-item.zoom-image:hover {
+            transform: translateY(-6px) scale(1.6);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Ensure timeline line and icons are visible above images */
+        #experience-timeline:before,
+        #experience-timeline:after {
+            z-index: 10 !important;
+        }
+
+        /* Define the vertical timeline line */
+        #experience-timeline:before {
+            position: absolute !important;
+            content: '' !important;
+            top: 0 !important;
+            bottom: 0 !important;
+            left: 303px !important;
+            right: auto !important;
+            height: 100% !important;
+            width: 3px !important;
+            background: #3498db !important;
+        }
+
+        /* Timeline line fade at bottom */
+        #experience-timeline:after {
+            position: absolute !important;
+            content: '' !important;
+            width: 3px !important;
+            height: 40px !important;
+            background: linear-gradient(to bottom, #3498db, rgba(52, 152, 219, 0)) !important;
+            top: 100% !important;
+            left: 303px !important;
+        }
+
+        .vtimeline-icon {
+            z-index: 99 !important;
+        }
+    </style>
 
     <!-- Vercel Web Analytics -->
     <script>
@@ -176,7 +255,8 @@
                     <h2 class="heading">About Me</h2>
                 </div>
                 <div class="col-md-8">
-                    <p style="font-size: 17.5px; text-align: justify; font-family: 'Arial', sans-serif; color: #333333;">
+                    <p
+                        style="font-size: 17.5px; text-align: justify; font-family: 'Arial', sans-serif; color: #333333;">
                         <!-- <span class="custom-font-SmileySansOblique" style="color: #9400D3;">
                             霆霓快雨 
                         </span>
@@ -184,20 +264,39 @@
                         <span class="custom-font-SmileySansOblique" style="color: #9400D3;">
                             Nimble as Lightning
                         </span>. -->
-                        This term <span class="custom-font-SmileySansOblique" style="color: #9400D3;">Nimble as Lightning</span> accurately summarizes my undergraduate research: <br> 
-                        <p style="margin-left: 2em;font-size: 17.5px; text-align: justify; font-family: 'Arial', sans-serif; color: #333333;">
-                        <strong>1) </strong>reproduced a fracture detection model within <span class="custom-font-SmileySansOblique" style="color: #9400D3;">two weeks</span>; 
-                        <strong>2) </strong>identified research gaps in few-shot classification, building, experimenting, writing, and publishing 
-                        a <strong style="font-size: 17px;">paper</strong> within <span class="custom-font-SmileySansOblique" style="color: #9400D3;">three weeks</span>; <strong>3) </strong>processed idea development, 
-                        and prototyping a generative AI project for programming educationin <span class="custom-font-SmileySansOblique" style="color: #9400D3;">one month</span>, which won in a <strong style="font-size: 17px;">campus competition</strong>
-                        ; <strong>4) </strong>learned React from scratch in <span class="custom-font-SmileySansOblique" style="color: #9400D3;">one month</span> and developing eight chatbot-response algorithm visualization modules in <span class="custom-font-SmileySansOblique" style="color: #9400D3;">one month</span>, 
-                        integrating them into a 30,000+ line project for large-scale experiments, leading to an <strong style="font-size: 17px;">international competition</strong> win; 
-                        <strong>5) </strong>developed four graph algorithm visualization modules in <span class="custom-font-SmileySansOblique" style="color: #9400D3;">three weeks</span> for a large-scale experiment involving over<strong style="font-size: 17px;"> 300 participants</strong>. 
-                        <strong>6)</strong> submitted a manuscript to <strong style="font-size: 17px;">IEEE TSE</strong> (Nov. 2025) and currently authoring another manuscript for <strong style="font-size: 17px;">BJET</strong>.
-                        </p>
-                        <p style="font-size: 17.5px; text-align: justify; font-family: 'Arial', sans-serif; color: #333333;">
-                        Throughout this period, I successfully managed eight courses and up to three group projects and assisted with various other research tasks assigned by my supervisor.                    
-                        </p>
+                        This term <span class="custom-font-SmileySansOblique" style="color: #9400D3;">Nimble as
+                            Lightning</span> accurately summarizes my undergraduate research: <br>
+                    <p
+                        style="margin-left: 2em;font-size: 17.5px; text-align: justify; font-family: 'Arial', sans-serif; color: #333333;">
+                        <strong>1) </strong>reproduced a fracture detection model within <span
+                            class="custom-font-SmileySansOblique" style="color: #9400D3;">two weeks</span>;
+                        <strong>2) </strong>identified research gaps in few-shot classification, building,
+                        experimenting, writing, and publishing
+                        a <strong style="font-size: 17px;">paper</strong> within <span
+                            class="custom-font-SmileySansOblique" style="color: #9400D3;">three weeks</span>; <strong>3)
+                        </strong>processed idea development,
+                        and prototyping a generative AI project for programming educationin <span
+                            class="custom-font-SmileySansOblique" style="color: #9400D3;">one month</span>, which won in
+                        a <strong style="font-size: 17px;">campus competition</strong>
+                        ; <strong>4) </strong>learned React from scratch in <span class="custom-font-SmileySansOblique"
+                            style="color: #9400D3;">one month</span> and developing eight chatbot-response algorithm
+                        visualization modules in <span class="custom-font-SmileySansOblique" style="color: #9400D3;">one
+                            month</span>,
+                        integrating them into a 30,000+ line project for large-scale experiments, leading to an <strong
+                            style="font-size: 17px;">international competition</strong> win;
+                        <strong>5) </strong>developed four graph algorithm visualization modules in <span
+                            class="custom-font-SmileySansOblique" style="color: #9400D3;">three weeks</span> for a
+                        large-scale experiment involving over<strong style="font-size: 17px;"> 300
+                            participants</strong>.
+                        <strong>6)</strong> submitted a manuscript to <strong style="font-size: 17px;">IEEE TSE</strong>
+                        (Nov. 2025) and currently authoring another manuscript for <strong
+                            style="font-size: 17px;">BJET</strong>.
+                    </p>
+                    <p
+                        style="font-size: 17.5px; text-align: justify; font-family: 'Arial', sans-serif; color: #333333;">
+                        Throughout this period, I successfully managed eight courses and up to three group projects and
+                        assisted with various other research tasks assigned by my supervisor.
+                    </p>
                     </p>
                 </div>
             </div>
@@ -212,7 +311,7 @@
             <h4>Master of Science in Engineering (MSE), Systems Engineering</h4>
         </div>
         <!-- End .education-block -->
-        
+
         <div class="education-block">
             <h3>Xi'an Jiaotong-Liverpool University</h3>
             <span class="education-date">September/2021 - July/2025</span>
@@ -224,37 +323,55 @@
             <ul class="course-list">
                 <li><strong>Linear Algebra</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;75</span></li>
                 <li><strong>Calculus</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;83</span></li>
-                <li><strong>Multivariable Calculus</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;70</span></li>
+                <li><strong>Multivariable Calculus</strong><span class="course-grade">A
+                        &nbsp;&nbsp;&nbsp;&nbsp;70</span></li>
                 <li><strong>Java Programming</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;92</span></li>
                 <li><strong>Computer Systems</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;84</span></li>
                 <li><strong>Data Structures</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;84</span></li>
-                <li><strong>Artificial Intelligence</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;73</span></li>
-                <li><strong>Introduction to Databases</strong><span class="course-grade">A-&nbsp;&nbsp;&nbsp;69</span></li>
-                <li><strong>Operating Systems Concepts</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;78</span></li>
-                <li><strong>Discrete Mathematics and Statistics</strong><span class="course-grade">B+ &nbsp;64</span></li>
-                <li><strong>Algorithmic Foundations and <br> Problem Solving</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;73</span></li>
-                <li><strong>Introduction to Networking</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;82</span></li>
+                <li><strong>Artificial Intelligence</strong><span class="course-grade">A
+                        &nbsp;&nbsp;&nbsp;&nbsp;73</span></li>
+                <li><strong>Introduction to Databases</strong><span class="course-grade">A-&nbsp;&nbsp;&nbsp;69</span>
+                </li>
+                <li><strong>Operating Systems Concepts</strong><span class="course-grade">A
+                        &nbsp;&nbsp;&nbsp;&nbsp;78</span></li>
+                <li><strong>Discrete Mathematics and Statistics</strong><span class="course-grade">B+ &nbsp;64</span>
+                </li>
+                <li><strong>Algorithmic Foundations and <br> Problem Solving</strong><span class="course-grade">A
+                        &nbsp;&nbsp;&nbsp;&nbsp;73</span></li>
+                <li><strong>Introduction to Networking</strong><span class="course-grade">A
+                        &nbsp;&nbsp;&nbsp;&nbsp;82</span></li>
                 <li><strong>Software Engineering I</strong><span class="course-grade">A-&nbsp;&nbsp;&nbsp;67</span></li>
                 <li><strong>Computer Graphics</strong><span class="course-grade">A-&nbsp;&nbsp;&nbsp;65</span></li>
-                <li><strong>Decision Computation and Language</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;80</span></li>
-                <li><strong>Software Engineering Group Project</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;77</span></li>
-                <li><strong>Advanced OO Programming</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;87</span></li>
-                <li><strong>Human-Centric Computing</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;71</span></li>
-                <li><strong>Complexity of Algorithms</strong><span class="course-grade">B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;57</span></li>
+                <li><strong>Decision Computation and Language</strong><span class="course-grade">A
+                        &nbsp;&nbsp;&nbsp;&nbsp;80</span></li>
+                <li><strong>Software Engineering Group Project</strong><span class="course-grade">A
+                        &nbsp;&nbsp;&nbsp;&nbsp;77</span></li>
+                <li><strong>Advanced OO Programming</strong><span class="course-grade">A
+                        &nbsp;&nbsp;&nbsp;&nbsp;87</span></li>
+                <li><strong>Human-Centric Computing</strong><span class="course-grade">A
+                        &nbsp;&nbsp;&nbsp;&nbsp;71</span></li>
+                <li><strong>Complexity of Algorithms</strong><span
+                        class="course-grade">B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;57</span></li>
                 <li><strong>Bio-Computation</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;78</span></li>
-                <li><strong>Big Data Analytics</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;72</span></li>
+                <li><strong>Big Data Analytics</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;72</span>
+                </li>
                 <li><strong>Machine Learning</strong><span class="course-grade">A-&nbsp;&nbsp;&nbsp;68</span></li>
-                <li><strong>Technologies for E-Commerce</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;89</span></li>
-                <li><strong>Software Engineering II</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;74</span></li>
-                <li><strong>Principles of Computer Games Design</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;75</span></li>
-                <li><strong>Final Year Project</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;81</span></li>
+                <li><strong>Technologies for E-Commerce</strong><span class="course-grade">A
+                        &nbsp;&nbsp;&nbsp;&nbsp;89</span></li>
+                <li><strong>Software Engineering II</strong><span class="course-grade">A
+                        &nbsp;&nbsp;&nbsp;&nbsp;74</span></li>
+                <li><strong>Principles of Computer Games Design</strong><span class="course-grade">A
+                        &nbsp;&nbsp;&nbsp;&nbsp;75</span></li>
+                <li><strong>Final Year Project</strong><span class="course-grade">A &nbsp;&nbsp;&nbsp;&nbsp;81</span>
+                </li>
 
             </ul>
             <div class="gpa">
-                <p><strong>WES GPA:</strong> 3.82/4.0 &nbsp;&nbsp; 
-                    <strong><a href="files/Mingyuan Li-Transcript-WES.pdf" target="_blank">The WES unofficial transcript</a></strong>
-                </p> 
-                
+                <p><strong>WES GPA:</strong> 3.82/4.0 &nbsp;&nbsp;
+                    <strong><a href="files/Mingyuan Li-Transcript-WES.pdf" target="_blank">The WES unofficial
+                            transcript</a></strong>
+                </p>
+
                 <p><strong>Major GPA:</strong> 3.87/4.0</p>
                 <p> Ranked in the top 1.97% in Java Programming.</p>
                 <!-- <p> Ranked approximately in the top 9% in Operating Systems Concepts.</p> -->
@@ -263,10 +380,13 @@
                 <br>
                 <!-- <p><strong><a href="#" id="transcriptLink">Check the full official transcript and marking criteria</a></strong></p>
                 <img id="transcriptImage" src="images\xjtlu_Transcript.png" alt="Full Official Transcript"> -->
-                <strong><a href="files/Mingyuan Li-Transcript.pdf" target="_blank">Official transcript, qualification and marking criteria</a></strong>
+                <strong><a href="files/Mingyuan Li-Transcript.pdf" target="_blank">Official transcript, qualification
+                        and marking criteria</a></strong>
 
                 <div class="credly-badge-container">
-                    <div data-iframe-width="120" data-iframe-height="150" data-share-badge-id="d24266df-e78e-423f-96fb-028868eb1200" data-share-badge-host="https://www.credly.com"></div>
+                    <div data-iframe-width="120" data-iframe-height="150"
+                        data-share-badge-id="d24266df-e78e-423f-96fb-028868eb1200"
+                        data-share-badge-host="https://www.credly.com"></div>
                     <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
                 </div>
             </div>
@@ -282,9 +402,10 @@
 
     <div id="education" style="background-color: #effeff;">
         <h2 class="heading">Publications</h2>
-        
+
         <div class="education-block">
-            <h3 id="TSE">Understanding Data Containers with Multimodal LLMs: An Empirical Study Across Encoding Formats and Visual Data</h3>
+            <h3 id="TSE">Understanding Data Containers with Multimodal LLMs: An Empirical Study Across Encoding Formats
+                and Visual Data</h3>
             <h4><strong style="color: #333333;">Mingyuan Li</strong>; Duan Wang; Erick Purwanto; Hai-Ning Liang</h4>
             <div class="gpa">
                 <p><i>IEEE Transactions on Software Engineering (TSE)</i> [Under review, Submitted Nov. 2025]</p>
@@ -292,40 +413,50 @@
         </div>
 
         <div class="education-block">
-            <h3 id="VisualCodeMOOC">VisualCodeMOOC: A Course Platform for Algorithms and Data Structures Integrating a Conversational Agent for Enhanced Learning Through Dynamic Visualizations</h3>
-            <h4><strong style="color: #333333;">Mingyuan Li</strong>; Duan Wang; Erick Purwanto; Thomas Selig; Qing Zhang; Hai-Ning Liang</h4>
+            <h3 id="VisualCodeMOOC">VisualCodeMOOC: A Course Platform for Algorithms and Data Structures Integrating a
+                Conversational Agent for Enhanced Learning Through Dynamic Visualizations</h3>
+            <h4><strong style="color: #333333;">Mingyuan Li</strong>; Duan Wang; Erick Purwanto; Thomas Selig; Qing
+                Zhang; Hai-Ning Liang</h4>
             <div class="gpa">
                 <p><i>SoftwareX, vol. 30, p. 102072, May 2025</i> (IF: 2.4)</p>
             </div>
-            <p><a href="https://www.sciencedirect.com/science/article/pii/S2352711025000391" target="_blank">Paper</a></p>
+            <p><a href="https://www.sciencedirect.com/science/article/pii/S2352711025000391" target="_blank">Paper</a>
+            </p>
             <p><a href="https://github.com/ElsevierSoftwareX/SOFTX-D-24-00589" target="_blank">Repository </a></p>
-            <p><a href="https://drive.google.com/file/d/1FPS0AhZwTjAZoZy-HqODWYlddN_Osdre/view?usp=sharing" target="_blank">Demo</a></p>
+            <p><a href="https://drive.google.com/file/d/1FPS0AhZwTjAZoZy-HqODWYlddN_Osdre/view?usp=sharing"
+                    target="_blank">Demo</a></p>
         </div>
 
         <div class="education-block">
             <h3 id="Global">Chatbot-Powered Learning for Sustainable Education in Programming</h3>
-            <h4>Erick Purwanto; Na Li; Qing Zhang; Thomas Selig; Yihong Wang; Teng Ma; Filbert Juwono; Pengfei Fan, (student member) <strong style="color: #333333;">Mingyuan Li</strong> and Duan Wang </h4>
+            <h4>Erick Purwanto; Na Li; Qing Zhang; Thomas Selig; Yihong Wang; Teng Ma; Filbert Juwono; Pengfei Fan,
+                (student member) <strong style="color: #333333;">Mingyuan Li</strong> and Duan Wang </h4>
             <div class="gpa">
-                <p><i>Global Impact Grants 2024 - Education for Sustainable Development and Building Future Leaders</i></p>
+                <p><i>Global Impact Grants 2024 - Education for Sustainable Development and Building Future Leaders</i>
+                </p>
             </div>
-            <p><a href="https://www.advance-he.ac.uk/knowledge-hub/global-impact-grants-2024-education-sustainable-development-and-building-future" target="_blank">Paper</a></p>
+            <p><a href="https://www.advance-he.ac.uk/knowledge-hub/global-impact-grants-2024-education-sustainable-development-and-building-future"
+                    target="_blank">Paper</a></p>
         </div>
 
         <div class="education-block">
             <h3 id="Patch-Based">Patch-Based Multi-Level Attention Mechanism for Few-Shot Multi-Label Medical Image
                 Classification</h3>
-            <h4><strong style="color: #333333;">Mingyuan Li</strong>; Yichuan Wang; Junfeng Huang; Erick Purwanto; Ka Lok Man</h4>
+            <h4><strong style="color: #333333;">Mingyuan Li</strong>; Yichuan Wang; Junfeng Huang; Erick Purwanto; Ka
+                Lok Man</h4>
             <div class="gpa">
                 <p><i>The 15th International Conference on Cyber-Enabled Distributed Computing and Knowledge
-                    Discovery, 2023</i></p>
+                        Discovery, 2023</i></p>
             </div>
             <p><a href="https://doi.org/10.1109/CyberC58899.2023.00024" target="_blank">Paper</a></p>
         </div>
 
         <div class="education-block">
-            <h3 id="Cervical Spine">Cervical Spine Fracture Detection Through Two-Stage Approach of Mask Segmentation and
+            <h3 id="Cervical Spine">Cervical Spine Fracture Detection Through Two-Stage Approach of Mask Segmentation
+                and
                 Windowing Based on Convolutional Neural Network</h3>
-            <h4>Doyeon Kim; Xujia Ning; Kaicheng Liang; Yi Ni; Duan Wang; <strong style="color: #333333;">Mingyuan Li </strong>; Yichuan Wang; Erick Purwanto; Ka Lok Man</h4>
+            <h4>Doyeon Kim; Xujia Ning; Kaicheng Liang; Yi Ni; Duan Wang; <strong style="color: #333333;">Mingyuan Li
+                </strong>; Yichuan Wang; Erick Purwanto; Ka Lok Man</h4>
             <div class="gpa">
                 <p><i>International Conference on Platform Technology and Service (PlatCon), 2023</i></p>
             </div>
@@ -341,7 +472,7 @@
             <div class="row">
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images\MCM.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
+                        <img src="images\MCM.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
                     </div>
                     <div class="project-info">
                         <h3>Achieved <strong>Honourable Mention</strong> for MCM/ICM in 2023</h3>
@@ -352,18 +483,21 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images\SURF23.png" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
+                        <img src="images\SURF23.png" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
                     </div>
                     <div class="project-info">
-                        <h3>Recognized as a <strong>Summer Undergraduate Research Fellow</strong> (2023) following participation in the program and poster competition</h3>
-                        <p style="margin: 2px 0;"><a href="https://github.com/Sushang-Li/personalpage/blob/master/images/SURF23_Poster.jpeg" target="_blank">Check the Poster of the SURF (2023) </a></p> 
+                        <h3>Recognized as a <strong>Summer Undergraduate Research Fellow</strong> (2023) following
+                            participation in the program and poster competition</h3>
+                        <p style="margin: 2px 0;"><a
+                                href="https://github.com/Sushang-Li/personalpage/blob/master/images/SURF23_Poster.jpeg"
+                                target="_blank">Check the Poster of the SURF (2023) </a></p>
                     </div>
                 </div>
                 <!-- End .project -->
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images\CyberC.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
+                        <img src="images\CyberC.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
                     </div>
                     <div class="project-info">
                         <h3>Achieved <strong>Third Prize</strong> in the IEEE CyberC 2023 Data Analysis Competition</h3>
@@ -374,10 +508,11 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images\Sypo.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
+                        <img src="images\Sypo.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
                     </div>
                     <div class="project-info">
-                        <h3>Achieved <strong>Second Prize</strong> at the 2023 XJTLU Student Research-Oriented Learning Summit</h3>
+                        <h3>Achieved <strong>Second Prize</strong> at the 2023 XJTLU Student Research-Oriented Learning
+                            Summit</h3>
                         <h3 style="font-size: medium; font-style: italic;"><strong>1000 RMB</strong></h3>
                     </div>
                 </div>
@@ -385,23 +520,32 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images\advanceHE.png" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
+                        <img src="images\advanceHE.png" class="zoom-image"
+                            style="max-width: 300px; max-height: 300px;" />
                     </div>
                     <div class="project-info">
-                        <h3 style=" margin-bottom: 10px;">Achieved the <strong>Global Impact Grants 2023-24</strong> from AdvanceHE</h3>
-                        <h3 style="font-size: medium; font-style: italic; margin-top: -5px; margin-bottom: -3px;"><strong>Top 15 / £1000</strong></h3>
-                        <p style="margin: 5px 0;margin-top: 30px;"><a href="https://advance-he.ac.uk/membership/member-benefits-2023-24/global-impact-grants-2023-24" target="_blank">Access the the Global Impact Grants 2023-24</a></p>
-                        <p style="margin: 2px 0;"><a href="https://www.advance-he.ac.uk/knowledge-hub/global-impact-grants-2024-education-sustainable-development-and-building-future" target="_blank">Access the full study (Volume 1, Page 5) on advanceHE  </a></p>
+                        <h3 style=" margin-bottom: 10px;">Achieved the <strong>Global Impact Grants 2023-24</strong>
+                            from AdvanceHE</h3>
+                        <h3 style="font-size: medium; font-style: italic; margin-top: -5px; margin-bottom: -3px;">
+                            <strong>Top 15 / £1000</strong>
+                        </h3>
+                        <p style="margin: 5px 0;margin-top: 30px;"><a
+                                href="https://advance-he.ac.uk/membership/member-benefits-2023-24/global-impact-grants-2023-24"
+                                target="_blank">Access the the Global Impact Grants 2023-24</a></p>
+                        <p style="margin: 2px 0;"><a
+                                href="https://www.advance-he.ac.uk/knowledge-hub/global-impact-grants-2024-education-sustainable-development-and-building-future"
+                                target="_blank">Access the full study (Volume 1, Page 5) on advanceHE </a></p>
                     </div>
                 </div>
                 <!-- End .project -->
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images\CPT208.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
+                        <img src="images\CPT208.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
                     </div>
                     <div class="project-info">
-                        <h3 id="208">Honored with an <strong>Honorable Mention</strong> in the CPT208 Human-Centric Computing</h3>
+                        <h3 id="208">Honored with an <strong>Honorable Mention</strong> in the CPT208 Human-Centric
+                            Computing</h3>
                         <h3 style="font-size: medium; font-style: italic;"><strong>Top 10%</strong></h3>
                     </div>
                 </div>
@@ -409,22 +553,28 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images\EdVenture.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
+                        <img src="images\EdVenture.jpg" class="zoom-image"
+                            style="max-width: 300px; max-height: 300px;" />
                     </div>
                     <div class="project-info">
-                        <h3>Presented project outcomes as a <strong>Guest Speaker</strong> at EdVenture: Exploring Innovative Practices in Higher Education</h3>
+                        <h3>Presented project outcomes as a <strong>Guest Speaker</strong> at EdVenture: Exploring
+                            Innovative Practices in Higher Education</h3>
                     </div>
                 </div>
                 <!-- End .project -->
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images\SchoolWinner.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
+                        <img src="images\SchoolWinner.jpg" class="zoom-image"
+                            style="max-width: 300px; max-height: 300px;" />
                     </div>
                     <div class="project-info">
-                        <h3>Achieved the Excellent Poster in SURF 2024 and presented research results at 2024 SURF Poster Fair as a <strong>School Winner</strong>.  </h3>
+                        <h3>Achieved the Excellent Poster in SURF 2024 and presented research results at 2024 SURF
+                            Poster Fair as a <strong>School Winner</strong>. </h3>
                         <h3 style="font-size: medium; font-style: italic;"><strong>Top 5%</strong></h3>
-                        <p style="margin: 2px 0;"><a href="https://github.com/Sushang-Li/personalpage/blob/master/images/2024surf_poster.png" target="_blank">Check the Poster of the SURF (2024) </a></p> 
+                        <p style="margin: 2px 0;"><a
+                                href="https://github.com/Sushang-Li/personalpage/blob/master/images/2024surf_poster.png"
+                                target="_blank">Check the Poster of the SURF (2024) </a></p>
                     </div>
                 </div>
                 <!-- End .project -->
@@ -440,131 +590,203 @@
                 <h3> <strong>Summer Undergraduate Research Fellowship 2023 (SURF)</strong> </h3>
                 <h4>Research Fellow</h4>
                 <p>
-                    Supervisor: 
-                    <p><a href="https://scholar.xjtlu.edu.cn/en/persons/ErickPurwanto" title="Access the detailed profile" target="_blank"> Erick Purwanto</a></p>
+                    Supervisor:
+                <p><a href="https://scholar.xjtlu.edu.cn/en/persons/ErickPurwanto" title="Access the detailed profile"
+                        target="_blank"> Erick Purwanto</a></p>
                 </p>
                 <ol>
-                    <strong>Replication and Improvement of the Cervical Spine Fracture Detection Research </strong><a href="#Cervical Spine">(Publish a paper at PlatCon) </a>
-                    <ul>
-                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                            Implemented advanced pre-processing techniques, e.g., windowing, image cropping with Yolov5, and voxel clipping, to enhance image quality and prepare data for analysis.
-                        </li>
-                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                            Developed a two-stage approach for cervical spine CT scan analysis, achieving a combined accuracy of 94.9%, and a BCE logits coefficient of 0.20 ± 0.01.
-                        </li>
-                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                            Utilized UNet-EfficientNet in Stage 1 for precise CT image segmentation, attaining an accuracy of 99.91%. Applied CrackNet-LSTM in Stage 2 for accurate cervical spine fracture detection, achieving an accuracy of 94.9%.
-                        </li>
-                        <div class="research-image-group">
-                            <img src="images\PlantC_outcome.jpg" class="research-image-item zoom-image" alt="Cervical spine fracture detection outcome figure">
+                    <div class="research-item-wrapper">
+                        <strong>Replication and Improvement of the Cervical Spine Fracture Detection Research
+                        </strong><a href="#Cervical Spine">(Publish a paper at PlatCon) </a>
+                        <div class="research-image-left">
+                            <img src="images\PlantC_outcome.jpg" class="research-image-item zoom-image"
+                                alt="Cervical spine fracture detection outcome figure">
                         </div>
-                    </ul>
+                        <ul>
+                            <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                                Implemented advanced pre-processing techniques, e.g., windowing, image cropping with
+                                Yolov5,
+                                and voxel clipping, to enhance image quality and prepare data for analysis.
+                            </li>
+                            <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                                Developed a two-stage approach for cervical spine CT scan analysis, achieving a combined
+                                accuracy of 94.9%, and a BCE logits coefficient of 0.20 ± 0.01.
+                            </li>
+                            <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                                Utilized UNet-EfficientNet in Stage 1 for precise CT image segmentation, attaining an
+                                accuracy of 99.91%. Applied CrackNet-LSTM in Stage 2 for accurate cervical spine
+                                fracture
+                                detection, achieving an accuracy of 94.9%.
+                            </li>
+                        </ul>
+                    </div>
                     <!-- <p><strong>At the HubMAP Competition, use YOLOv8 for human blood vessel segmentation and make pseudo labels for retraining. Trying to combine SAM with YOLOv8 for segmentation.</strong></p> -->
-                    <strong>Few-Shot Multi-Label Medical Image Classification Research </strong> <a href="#Patch-Based"> (Publish a paper at CyberC)</a>
-                    <ul>
-                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                            Training a few-shot classification model using the VPT model with a backbone of Swin-transformer. Evaluated the model's robustness using three datasets: ChestDR (chest X-ray), Endo (genuine colonoscopy), and Colon (colon cells).
-                        </li>
-                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                            Developed multi-level attention patch-based preprocessing technique for the model, enhancing the model's ability to detect minute details, e.g., overlapping information.
-                        </li>
-                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                            Improved mAP (1.2%-1.7%) and AUC (4.1%-5.2%) on two datasets (ChestDR, and Endo), compared to the baseline.
-                        </li>
-                        <div class="research-image-group">
-                            <img src="images\CyberC_outcome1.jpg" class="research-image-item zoom-image" alt="Few-shot multi-label medical image classification outcome figure">
+                    <div class="research-item-wrapper">
+                        <strong>Few-Shot Multi-Label Medical Image Classification Research </strong> <a
+                            href="#Patch-Based">
+                            (Publish a paper at CyberC)</a>
+                        <div class="research-image-left">
+                            <img src="images\CyberC_outcome1.jpg" class="research-image-item zoom-image"
+                                alt="Few-shot multi-label medical image classification outcome figure">
                         </div>
-                    </ul>
+                        <ul>
+                            <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                                Training a few-shot classification model using the VPT model with a backbone of
+                                Swin-transformer. Evaluated the model's robustness using three datasets: ChestDR (chest
+                                X-ray), Endo (genuine colonoscopy), and Colon (colon cells).
+                            </li>
+                            <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                                Developed multi-level attention patch-based preprocessing technique for the model,
+                                enhancing
+                                the model's ability to detect minute details, e.g., overlapping information.
+                            </li>
+                            <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                                Improved mAP (1.2%-1.7%) and AUC (4.1%-5.2%) on two datasets (ChestDR, and Endo),
+                                compared
+                                to the baseline.
+                            </li>
+                        </ul>
+                    </div>
                 </ol>
             </div>
 
             <div data-date=" September/2023 - December/2024">
                 <h3> <strong> GenAI-Powered ChatBot in Programming and Algorithm Education</strong></h3>
                 <h4> Research Assistant (Team of Two)</h4>
-                <h4 style="font-size: 18px;"> <strong> 
-                    Initial Funding Source: <a href="https://scholar.xjtlu.edu.cn/en/projects/exploration-of-the-role-of-ai-based-chatbots-in-supporting-studen " title="Access the funding" target="_blank"> TDF: A Internal Research Project</a>
-                </strong></h4>
-                <h4 style="font-size: 18px;"> <strong> 
-                    Official Project & Funding Homepage: <a href="https://scholar.xjtlu.edu.cn/en/projects/advance-he-global-impact-grant-2023-2024" title="Access the funding" target="_blank"> Advance HE Global Impact Grant</a>
-                </strong></h4>
+                <h4 style="font-size: 18px;"> <strong>
+                        Initial Funding Source: <a
+                            href="https://scholar.xjtlu.edu.cn/en/projects/exploration-of-the-role-of-ai-based-chatbots-in-supporting-studen "
+                            title="Access the funding" target="_blank"> TDF: A Internal Research Project</a>
+                    </strong></h4>
+                <h4 style="font-size: 18px;"> <strong>
+                        Official Project & Funding Homepage: <a
+                            href="https://scholar.xjtlu.edu.cn/en/projects/advance-he-global-impact-grant-2023-2024"
+                            title="Access the funding" target="_blank"> Advance HE Global Impact Grant</a>
+                    </strong></h4>
                 <p>
-                    Supervisor: 
-                    <p><a href="https://scholar.xjtlu.edu.cn/en/persons/ErickPurwanto" title="Access the detailed profile" target="_blank"> Erick Purwanto</a></p>
-                    <p><a href="https://scholar.xjtlu.edu.cn/en/persons/YihongWang" title="Access the detailed profile" target="_blank"> Yihong Wang</a></p>
-                    <p><a href="https://scholar.xjtlu.edu.cn/en/persons/ThomasSelig" title="Access the detailed profile" target="_blank"> Thomas Selig</a></p>
+                    Supervisor:
+                <p><a href="https://scholar.xjtlu.edu.cn/en/persons/ErickPurwanto" title="Access the detailed profile"
+                        target="_blank"> Erick Purwanto</a></p>
+                <p><a href="https://scholar.xjtlu.edu.cn/en/persons/YihongWang" title="Access the detailed profile"
+                        target="_blank"> Yihong Wang</a></p>
+                <p><a href="https://scholar.xjtlu.edu.cn/en/persons/ThomasSelig" title="Access the detailed profile"
+                        target="_blank"> Thomas Selig</a></p>
                 </p>
                 <ol>
-                    <strong> 
-                        Phase One: Created a programming tutor bot based on open-source projects tailored for programming and algorithm; winning the
+                    <strong>
+                        Phase One: Created a programming tutor bot based on open-source projects tailored for
+                        programming and algorithm; winning the
                         second prize at the XJTLU Student Research-Oriented Learning Summit
                     </strong>
                     <ul>
-                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">Utilized Prompt Engineering to call OpenAI APIs, creating an educational chatbot for programming with 8 different topics. Implemented
-                            Chain of Thought and Moderation to prevent non-educational output, making it suitable for beginners.</li>
+                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">Utilized
+                            Prompt Engineering to call OpenAI APIs, creating an educational chatbot for programming with
+                            8 different topics. Implemented
+                            Chain of Thought and Moderation to prevent non-educational output, making it suitable for
+                            beginners.</li>
                         <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                            The bot was tested with an Indonesian student across four topics with two languages, achieving a 91% effectiveness rate, which demonstrates its pedagogical value and multilingual capabilities.
+                            The bot was tested with an Indonesian student across four topics with two languages,
+                            achieving a 91% effectiveness rate, which demonstrates its pedagogical value and
+                            multilingual capabilities.
                         </li>
                     </ul>
-                    <strong>
-                        Phase Two: Developed algorithm visualization module based on bot responses to aid teaching; received the <a href="#Global">Global Impact Grants 2023-24</a> from Advance HE with present findings
-                    </strong>
-                    <ul>
-                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">Created seven algorithm visualizations using d3.node, including for loops and array sorting lessons. 
-                            Refactored the backend logic of a React-based TypeScript project to synchronize bot responses with dynamic visualizations, leading to the development of VisualCodeChat, a teaching-focused chatbot platform. 
-                             </li>
-                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                            Developed a pilot MOOC with VisualCodeChat and integrated our chatbot into an existing mature platform to create VisualCodeMOOC. </li>
-                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;"> 
-                            Conducted 2 controlled experiments consecutively with 16 preA high school students and 88 non-programming background students from the CPT206 course. 
-                            Reliable questionnaire results (Cronbach's alpha: 0.891) and a high average score of 4.18, supported by qualitative coding, demonstrate the bot met all evaluation criteria.
-                        </li>
-                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;"> 
-                           Authered a manuscript based on the current findings, which get accepted and published in <a href="#VisualCodeMOOC"><i>SoftwareX</i></a>.
-                        </li>
-                        <div class="research-image-group">
-                            <img src="images\Chatbot_outcome3.png" class="research-image-item zoom-image" alt="GenAI-powered chatbot visualization outcomes">
-                        </div>
-                    </ul>
-                    <strong>Phase Three: Researched the effectiveness and HCI criterias of our design compared to standard GPT in teaching graph algorithms.
+                    <div class="research-item-wrapper">
+                        <strong>
+                            Phase Two: Developed algorithm visualization module based on bot responses to aid teaching;
+                            received the <a href="#Global">Global Impact Grants 2023-24</a> from Advance HE with present
+                            findings
                         </strong>
-                    <ul>
-                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">Iterated three graph algorithm visualizations using d3.force, including DFS-based cycle and connectivity checks, and
-                            BFS-based connected components check. Added data recording and user-friendly guidance modules.</li>
-                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">Conducted 8 controlled experiments (330 CPT204 students) to evaluate effectiveness, producing the OvSV dataset 
-                            with two groups: our bot vs. a original GPT-based AI tool.  </li>
-                        <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">Ours outperforms ChatGPT across all dimensions, with T-test p-values below 0.05, confirming statistically significant improvements in usability, effectiveness, and engagement. 
-                            The project was showcased at EdVenture and internal sharing seminars.</li>
-                        <div class="research-image-group">
-                            <img src="images\Chatbot_outcome1.jpg" class="research-image-item zoom-image" alt="Graph algorithm chatbot experiment outcomes">
+                        <div class="research-image-left">
+                            <img src="images\Chatbot_outcome3.png" class="research-image-item zoom-image"
+                                alt="GenAI-powered chatbot visualization outcomes">
                         </div>
-                                            
-                    </ul>
+                        <ul>
+                            <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                                Created
+                                seven algorithm visualizations using d3.node, including for loops and array sorting
+                                lessons.
+                                Refactored the backend logic of a React-based TypeScript project to synchronize bot
+                                responses with dynamic visualizations, leading to the development of VisualCodeChat, a
+                                teaching-focused chatbot platform.
+                            </li>
+                            <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                                Developed a pilot MOOC with VisualCodeChat and integrated our chatbot into an existing
+                                mature platform to create VisualCodeMOOC. </li>
+                            <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                                Conducted 2 controlled experiments consecutively with 16 preA high school students and
+                                88
+                                non-programming background students from the CPT206 course.
+                                Reliable questionnaire results (Cronbach's alpha: 0.891) and a high average score of
+                                4.18,
+                                supported by qualitative coding, demonstrate the bot met all evaluation criteria.
+                            </li>
+                            <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                                Authered a manuscript based on the current findings, which get accepted and published in
+                                <a href="#VisualCodeMOOC"><i>SoftwareX</i></a>.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="research-item-wrapper">
+                        <strong>Phase Three: Researched the effectiveness and HCI criterias of our design compared to
+                            standard GPT in teaching graph algorithms.
+                        </strong>
+                        <div class="research-image-left">
+                            <img src="images\Chatbot_outcome1.jpg" class="research-image-item zoom-image"
+                                alt="Graph algorithm chatbot experiment outcomes">
+                        </div>
+                        <ul>
+                            <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                                Iterated
+                                three graph algorithm visualizations using d3.force, including DFS-based cycle and
+                                connectivity checks, and
+                                BFS-based connected components check. Added data recording and user-friendly guidance
+                                modules.</li>
+                            <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                                Conducted
+                                8 controlled experiments (330 CPT204 students) to evaluate effectiveness, producing the
+                                OvSV
+                                dataset
+                                with two groups: our bot vs. a original GPT-based AI tool. </li>
+                            <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">Ours
+                                outperforms ChatGPT across all dimensions, with T-test p-values below 0.05, confirming
+                                statistically significant improvements in usability, effectiveness, and engagement.
+                                The project was showcased at EdVenture and internal sharing seminars.</li>
+                        </ul>
+                    </div>
                 </ol>
             </div>
 
             <div data-date="December/2024 - November/2025">
-                <h3> <strong>Exploring LLM's Impact on Software Engineering via Encoding Formats and Visual Data</strong></h3>
+                <h3> <strong>Exploring LLM's Impact on Software Engineering via Encoding Formats and Visual
+                        Data</strong></h3>
                 <h4> Research Assistant (Team of Two)</h4>
                 <p>
-                    Supervisor: 
-                    <p><a href="https://scholar.xjtlu.edu.cn/en/persons/ErickPurwanto" title="Access the detailed profile" target="_blank"> Erick Purwanto</a></p>
-                    <p><a href="https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page?id=437" title="Access the detailed profile" target="_blank"> Hai-Ning Liang</a></p>
+                    Supervisor:
+                <p><a href="https://scholar.xjtlu.edu.cn/en/persons/ErickPurwanto" title="Access the detailed profile"
+                        target="_blank"> Erick Purwanto</a></p>
+                <p><a href="https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page?id=437"
+                        title="Access the detailed profile" target="_blank"> Hai-Ning Liang</a></p>
                 </p>
                 <ul>
                     <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
                         Iterated VisualCodeChat to ver. 2.0, incorporating multimodal capabilities.
                     </li>
                     <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                        Constructed a systematic dataset comprising 300 encoding elements and collected 1500 dialogue instances via it.
+                        Constructed a systematic dataset comprising 300 encoding elements and collected 1500 dialogue
+                        instances via it.
                     </li>
                     <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                        Designed and conducted static analysis, open card-sorting discussions, and comprehensive quantitative analyses to evaluate LLMs' capabilities in generating encoding formats for algorithmic formulation (RQ1).
+                        Designed and conducted static analysis, open card-sorting discussions, and comprehensive
+                        quantitative analyses to evaluate LLMs' capabilities in generating encoding formats for
+                        algorithmic formulation (RQ1).
                     </li>
                     <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                        Developed 3 fixing prompt strategies to assess LLMs' capabilities in repairing and iteratively repairing errors identified in RQ1.
+                        Developed 3 fixing prompt strategies to assess LLMs' capabilities in repairing and iteratively
+                        repairing errors identified in RQ1.
                     </li>
                     <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                        Authored a manuscript (Introduction, background, study setup, RQ1, RQ2) currently under review at <a href="#TSE"><i>IEEE TSE</i></a>.
+                        Authored a manuscript (Introduction, background, study setup, RQ1, RQ2) currently under review
+                        at <a href="#TSE"><i>IEEE TSE</i></a>.
                     </li>
                 </ul>
             </div>
@@ -573,22 +795,28 @@
                 <h3> <strong>Exploring Equity-Vulnerability Balances in Structured Visual AI for Learning</strong></h3>
                 <h4> Lead Research Assistant</h4>
                 <p>
-                    Supervisor: 
-                    <p><a href="https://scholar.xjtlu.edu.cn/en/persons/YihongWang" title="Access the detailed profile" target="_blank"> Yihong Wang</a></p>
-                    <p><a href="https://scholar.xjtlu.edu.cn/en/persons/ErickPurwanto" title="Access the detailed profile" target="_blank"> Erick Purwanto</a></p>
+                    Supervisor:
+                <p><a href="https://scholar.xjtlu.edu.cn/en/persons/YihongWang" title="Access the detailed profile"
+                        target="_blank"> Yihong Wang</a></p>
+                <p><a href="https://scholar.xjtlu.edu.cn/en/persons/ErickPurwanto" title="Access the detailed profile"
+                        target="_blank"> Erick Purwanto</a></p>
                 </p>
                 <ul>
                     <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                        Performed data cleaning and feature engineering on the OvSV dataset derived from 8 controlled experiments with 330 students to enable statistical modeling.
+                        Performed data cleaning and feature engineering on the OvSV dataset derived from 8 controlled
+                        experiments with 330 students to enable statistical modeling.
                     </li>
                     <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                        Conducted EFA and removed 9 features; validated a 5-factor model using CFA (TLI/CFI > 0.90; RMSEA/SRMR < 0.08), ensuring questionnaire construct quality.
+                        Conducted EFA and removed 9 features; validated a 5-factor model using CFA (TLI/CFI > 0.90;
+                        RMSEA/SRMR < 0.08), ensuring questionnaire construct quality. </li>
+                    <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
+                        Based on the CFA model, assessed Cronbach's α and Pearson correlations, performed MANOVA and
+                        t-tests, and used ANOVA to analyze between-group differences across features, revealing 9 key
+                        significant effects.
                     </li>
                     <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                        Based on the CFA model, assessed Cronbach's α and Pearson correlations, performed MANOVA and t-tests, and used ANOVA to analyze between-group differences across features, revealing 9 key significant effects.
-                    </li>
-                    <li style="font-size: 15.5px; text-align: justify; font-family: 'Arial', sans-serif;">
-                        (In progress) Authoring a manuscript (literature review, methodology, findings, discussion) for <i>British Journal of Educational Technology</i>.
+                        (In progress) Authoring a manuscript (literature review, methodology, findings, discussion) for
+                        <i>British Journal of Educational Technology</i>.
                     </li>
                 </ul>
             </div>
@@ -597,126 +825,187 @@
     </div>
     <!-- End #experience -->
 
-    <div id="education" >
+    <div id="education">
         <h2 class="heading">Course Projects</h2>
         <p style="font-size: 16.5px;"><a href="https://github.com/Sushang-Li/UGCourseProjects" target="_blank">
-            Access the details of all course projects on GitHub
-        </a></p>
+                Access the details of all course projects on GitHub
+            </a></p>
         <div class="education-block" style="display: flex; align-items: center;">
             <div>
                 <h3><strong>Java Programming</strong> | Java</h3>
                 <h4>Individual Project</h4>
                 <div class="gpa">
                     <li style="font-size: 15px; ">
-                        Use of object-oriented techniques, file processing, and data structures to accomplish pathological sequence detection and
+                        Use of object-oriented techniques, file processing, and data structures to accomplish
+                        pathological sequence detection and
                         identification of DNA base sequences of interest.
                     </li>
                 </div>
             </div>
-            <img src="images\CPT111.png" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
+            <img src="images\CPT111.png" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
         </div>
 
         <div class="education-block" style="display: flex; align-items: center;">
-            <div><h3><strong>Introduction to Databases</strong> | SQL</h3>
-            <h4>Group Member of the Group Project</h4>
-            <div class="gpa">
-                <p><li style="font-size: 15 px">Completion of a third-paradigm-compliant drink information dataset and extension of the development of a database on drink packaging material information.</li></p>
-            </div></div>
-            <img src="images\CPT103.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
-        </div>
-        
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div><h3><strong>Artificial Intelligence</strong> | Python</h3>
-            <h4>Individual Project</h4>
-            <div class="gpa">
-                <p><li style="font-size: 15 px">After performing dimensionality reduction through PCA, utilizing classification methods such as CNN, SVM, and Naive Bayes, along with unsupervised learning via K-means clustering.</li></p>
-            </div></div>
-            <img src="images\INT104.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
-        </div>
-        
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div><h3><strong>Introduction to Computer Networking</strong> | Python</h3>
-            <h4>Group Member of the Group Project</h4>
-            <div class="gpa">
-                <p><li style="font-size: 15 px">Implemented a client application for user authorization, file upload, and download using Python Socket programming based on a given protocol.</li>
-                    <br>
-                    <li style="font-size: 15 px">Created a simple SDN network topology with Mininet, simulating traffic control using SDN flow tables, enabling the SDN controller to forward/redirect traffic without client awareness.</li></p>
-            </div></div>
-            <img src="images\CAN201.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
-        </div>
-        
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div><h3><strong>Computer Graphics</strong> | C++, OpenGL</h3>
-            <h4>Individual Project</h4>
-            <div class="gpa">
-                <p><li style="font-size: 15 px">Created a 2D graduation invitation card using OpenGL functions, including static and dynamic objects with interactive inputs.</li>
-                    <br>
-                    <li style="font-size: 15 px">Developed a 3D school scene using OpenGL, covering geometry creation, hierarchical modeling, transformations, viewing and projection, lighting and materials, texture mapping, animation, and interaction.</li></p>
-            </div></div>
-            <img src="images\CPT205.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
-        </div>
-        
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div><h3><strong>Software Engineering Group Project</strong> | Spring Boot, MySQL, HTML, CSS, JavaScript</h3>
-            <h4>Group Leader of the Group Project</h4>
-            <div class="gpa">
-                <p><li style="font-size: 15 px">
-                    As the group leader, I led an 8-member team to develop an integrated sports center booking system using Spring Boot, based on the Model View Controller architecture, which includes both user and administrator systems consisting of 10 subsystems.
-                    I completed two full admin modules with full-stack development.
-                </p></li>
-            </div></div>
-            <img src="images\CPT202-2.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
-        </div>
-        
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div><h3><strong>Human-Centric Computing</strong> | MoDao</h3>
-            <h4>Group Member of the Group Project</h4>
-            <div class="gpa">
-                <p><li style="font-size: 15 px">
-                    Collaborated in a 5-member team to complete requirement analysis, design, prototyping, evaluation, and iteration using various HCI techniques, culminating in the production of a project presentation, report, and poster, and earning an <a href="#208">Honorable Mention</a> (1 of 8).
-                </li></p>
-            </div></div>
-            <img src="images\CPT208_outcome.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
-        </div>
-        
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div><h3><strong>Advanced OO Programming</strong> | Java</h3>
-            <h4>Group Member of the Group Project</h4>
-            <div class="gpa">
-                <p><li style="font-size: 15 px">
-                    Collaborated with a teammate to develop a multi-agent pathfinding game using BFS, employing Agile methodology, maintaining consistent code conventions, and implementing a user-friendly graphical interface. 
-                    Demonstrated algorithm superiority through interactive validation and applied comprehensive OOP principles.
-                </li></p>
-            </div></div>
-            <img src="images\CPT204.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
+            <div>
+                <h3><strong>Introduction to Databases</strong> | SQL</h3>
+                <h4>Group Member of the Group Project</h4>
+                <div class="gpa">
+                    <p>
+                        <li style="font-size: 15 px">Completion of a third-paradigm-compliant drink information dataset
+                            and extension of the development of a database on drink packaging material information.</li>
+                    </p>
+                </div>
+            </div>
+            <img src="images\CPT103.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
         </div>
 
         <div class="education-block" style="display: flex; align-items: center;">
-            <div><h3><strong>Big Data Analytics</strong> | Python</h3>
-            <h4>Individual Project</h4>
-            <div class="gpa">
-                <p>
-                    <li style="font-size: 15 px">
-                        Scraped 400 movie datasets from TMDB using BeautifulSoup. After literature reviews and idea exploration, performed exploratory data analysis with visualizations of post-Hollywood film attributes. Data cleaning and preprocessing led to eight visualizations addressing the research questions, followed by hypothesis validation using PLS-SEM.
+            <div>
+                <h3><strong>Artificial Intelligence</strong> | Python</h3>
+                <h4>Individual Project</h4>
+                <div class="gpa">
+                    <p>
+                        <li style="font-size: 15 px">After performing dimensionality reduction through PCA, utilizing
+                            classification methods such as CNN, SVM, and Naive Bayes, along with unsupervised learning
+                            via K-means clustering.</li>
+                    </p>
+                </div>
+            </div>
+            <img src="images\INT104.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
+        </div>
+
+        <div class="education-block" style="display: flex; align-items: center;">
+            <div>
+                <h3><strong>Introduction to Computer Networking</strong> | Python</h3>
+                <h4>Group Member of the Group Project</h4>
+                <div class="gpa">
+                    <p>
+                        <li style="font-size: 15 px">Implemented a client application for user authorization, file
+                            upload, and download using Python Socket programming based on a given protocol.</li>
+                        <br>
+                        <li style="font-size: 15 px">Created a simple SDN network topology with Mininet, simulating
+                            traffic control using SDN flow tables, enabling the SDN controller to forward/redirect
+                            traffic without client awareness.</li>
+                    </p>
+                </div>
+            </div>
+            <img src="images\CAN201.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
+        </div>
+
+        <div class="education-block" style="display: flex; align-items: center;">
+            <div>
+                <h3><strong>Computer Graphics</strong> | C++, OpenGL</h3>
+                <h4>Individual Project</h4>
+                <div class="gpa">
+                    <p>
+                        <li style="font-size: 15 px">Created a 2D graduation invitation card using OpenGL functions,
+                            including static and dynamic objects with interactive inputs.</li>
+                        <br>
+                        <li style="font-size: 15 px">Developed a 3D school scene using OpenGL, covering geometry
+                            creation, hierarchical modeling, transformations, viewing and projection, lighting and
+                            materials, texture mapping, animation, and interaction.</li>
+                    </p>
+                </div>
+            </div>
+            <img src="images\CPT205.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
+        </div>
+
+        <div class="education-block" style="display: flex; align-items: center;">
+            <div>
+                <h3><strong>Software Engineering Group Project</strong> | Spring Boot, MySQL, HTML, CSS, JavaScript</h3>
+                <h4>Group Leader of the Group Project</h4>
+                <div class="gpa">
+                    <p>
+                        <li style="font-size: 15 px">
+                            As the group leader, I led an 8-member team to develop an integrated sports center booking
+                            system using Spring Boot, based on the Model View Controller architecture, which includes
+                            both user and administrator systems consisting of 10 subsystems.
+                            I completed two full admin modules with full-stack development.
+                    </p>
                     </li>
-                    <br>
-                    <li style="font-size: 15 px">
-                        Developed a Random Forest model with appropriate preprocessing for multi-class classification to predict student academic trajectory. The model outperformed others, achieving superior evaluation metrics and a competitive score in a Kaggle competition.
-                    </li>
-                </p>
-            </div></div>
-            <img src="images\INT303.png" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
+                </div>
+            </div>
+            <img src="images\CPT202-2.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
         </div>
 
         <div class="education-block" style="display: flex; align-items: center;">
-            <div><h3><strong>Machine Learning</strong> | Python</h3>
-            <h4>Individual Project</h4>
-            <div class="gpa">
-                <p><li style="font-size: 15 px">
-                    Improved the GECCO architecture for handwritten digit recognition on the MNIST dataset by implementing three key modifications, enhancing model accuracy while reducing its size. The modified GECCO was compared with baseline models, including CNN, SpinalNet, ResNet, and Efficient-CapsNet. Results showed that the improved GECCO outperformed traditional CNN models, achieving higher accuracy, lower error rates, and a more compact parameter size.
-                </li></p>
-            </div></div>
-            <img src="images\INT305.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;"/>
+            <div>
+                <h3><strong>Human-Centric Computing</strong> | MoDao</h3>
+                <h4>Group Member of the Group Project</h4>
+                <div class="gpa">
+                    <p>
+                        <li style="font-size: 15 px">
+                            Collaborated in a 5-member team to complete requirement analysis, design, prototyping,
+                            evaluation, and iteration using various HCI techniques, culminating in the production of a
+                            project presentation, report, and poster, and earning an <a href="#208">Honorable
+                                Mention</a> (1 of 8).
+                        </li>
+                    </p>
+                </div>
+            </div>
+            <img src="images\CPT208_outcome.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
+        </div>
+
+        <div class="education-block" style="display: flex; align-items: center;">
+            <div>
+                <h3><strong>Advanced OO Programming</strong> | Java</h3>
+                <h4>Group Member of the Group Project</h4>
+                <div class="gpa">
+                    <p>
+                        <li style="font-size: 15 px">
+                            Collaborated with a teammate to develop a multi-agent pathfinding game using BFS, employing
+                            Agile methodology, maintaining consistent code conventions, and implementing a user-friendly
+                            graphical interface.
+                            Demonstrated algorithm superiority through interactive validation and applied comprehensive
+                            OOP principles.
+                        </li>
+                    </p>
+                </div>
+            </div>
+            <img src="images\CPT204.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
+        </div>
+
+        <div class="education-block" style="display: flex; align-items: center;">
+            <div>
+                <h3><strong>Big Data Analytics</strong> | Python</h3>
+                <h4>Individual Project</h4>
+                <div class="gpa">
+                    <p>
+                        <li style="font-size: 15 px">
+                            Scraped 400 movie datasets from TMDB using BeautifulSoup. After literature reviews and idea
+                            exploration, performed exploratory data analysis with visualizations of post-Hollywood film
+                            attributes. Data cleaning and preprocessing led to eight visualizations addressing the
+                            research questions, followed by hypothesis validation using PLS-SEM.
+                        </li>
+                        <br>
+                        <li style="font-size: 15 px">
+                            Developed a Random Forest model with appropriate preprocessing for multi-class
+                            classification to predict student academic trajectory. The model outperformed others,
+                            achieving superior evaluation metrics and a competitive score in a Kaggle competition.
+                        </li>
+                    </p>
+                </div>
+            </div>
+            <img src="images\INT303.png" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
+        </div>
+
+        <div class="education-block" style="display: flex; align-items: center;">
+            <div>
+                <h3><strong>Machine Learning</strong> | Python</h3>
+                <h4>Individual Project</h4>
+                <div class="gpa">
+                    <p>
+                        <li style="font-size: 15 px">
+                            Improved the GECCO architecture for handwritten digit recognition on the MNIST dataset by
+                            implementing three key modifications, enhancing model accuracy while reducing its size. The
+                            modified GECCO was compared with baseline models, including CNN, SpinalNet, ResNet, and
+                            Efficient-CapsNet. Results showed that the improved GECCO outperformed traditional CNN
+                            models, achieving higher accuracy, lower error rates, and a more compact parameter size.
+                        </li>
+                    </p>
+                </div>
+            </div>
+            <img src="images\INT305.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
         </div>
     </div>
     <!-- End #education -->
@@ -731,10 +1020,12 @@
                     Contributed to the development of a pharmaceutical ordering system.
                 </li>
                 <li style="font-size: 15 px">
-                    Optimized the code structure with a low coupling design principle to ensure maintainability and scalability.  
+                    Optimized the code structure with a low coupling design principle to ensure maintainability and
+                    scalability.
                 </li>
-                <li style="font-size: 15 px">       
-                    Effectively managed MySQL databases, and designed database structures that adhere to the Third Normal Form
+                <li style="font-size: 15 px">
+                    Effectively managed MySQL databases, and designed database structures that adhere to the Third
+                    Normal Form
                 </li>
             </div>
         </div>
@@ -779,7 +1070,7 @@
                 <button type="submit">Send</button>
             </form>
         </div> -->
-        <!-- End #contact-form -->
+    <!-- End #contact-form -->
     <!-- </div> -->
     <!-- End #contact -->
 
@@ -791,8 +1082,9 @@
                         Copyright &copy; <span id="current-year">2024</span> Mingyuan Li
                     </p>
                     <p>Last updated: 2025-12-15 UTC+8</p>
-                    <p>                    
-                        Acknowledgments: This project is inspired by and builds upon the work of <a href="https://github.com/RyanFitzgerald/devportfolio" target="_blank">devportfolio</a>.
+                    <p>
+                        Acknowledgments: This project is inspired by and builds upon the work of <a
+                            href="https://github.com/RyanFitzgerald/devportfolio" target="_blank">devportfolio</a>.
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -803,7 +1095,8 @@
                 <div class="col-sm-5 social">
                     <ul>
                         <li>
-                            <a href="https://github.com/Sushang-Li" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://github.com/Sushang-Li" target="_blank"><i class="fa fa-github"
+                                    aria-hidden="true"></i></a>
                         </li>
                         <!-- <li>
                             <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
@@ -836,8 +1129,8 @@
 
         image.style.display = "none";
 
-        link.onclick = function(event) {
-            event.preventDefault();  
+        link.onclick = function (event) {
+            event.preventDefault();
             if (image.style.display === "none") {
                 image.style.display = "block";
             } else {
@@ -845,19 +1138,19 @@
             }
         }
 
-    var link2 = document.getElementById("transcriptLink1");
-    var image2 = document.getElementById("transcriptImage1");
+        var link2 = document.getElementById("transcriptLink1");
+        var image2 = document.getElementById("transcriptImage1");
 
-    image2.style.display = "none";
+        image2.style.display = "none";
 
-    link2.onclick = function(event) {
-        event.preventDefault();  
-        if (image2.style.display === "none") {
-            image2.style.display = "block";
-        } else {
-            image2.style.display = "none";
+        link2.onclick = function (event) {
+            event.preventDefault();
+            if (image2.style.display === "none") {
+                image2.style.display = "block";
+            } else {
+                image2.style.display = "none";
+            }
         }
-    }
     </script>
 
     <!-- Vercel Speed Insights -->

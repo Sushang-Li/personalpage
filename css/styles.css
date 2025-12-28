@@ -1,4 +1,4 @@
-/*!
+﻿/*!
     Title: Dev Portfolio Template
     Version: 1.2.2
     Last Change: 03/25/2020
@@ -385,26 +385,70 @@ footer {
     max-width: 1000px
 }
 
-/* Research experience images: centered, consistent, responsive */
+/* Research experience images: positioned on the left side of timeline */
 .research-image-group {
-    margin: 18px auto 5px auto;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 260px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin: 0;
+    padding-right: 20px;
 }
 
 .research-image-item {
-    max-width: 320px;
+    max-width: 220px;
     width: 100%;
     height: auto;
     border-radius: 6px;
     object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* 仅在 Research Experience 中的图片增加轻微放大效果，避免影响其它版块 */
+/* 浠呭湪 Research Experience 涓殑鍥剧墖澧炲姞杞诲井鏀惧ぇ鏁堟灉锛岄伩鍏嶅奖鍝嶅叾瀹冪増鍧?*/
 .research-image-group .research-image-item.zoom-image:hover {
-    transform: translateY(-6px) scale(1.5);
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 涓哄寘鍚浘鐗囩殑 div[data-date] 娣诲姞鐩稿瀹氫綅锛屼娇鍥剧墖鍙互缁濆瀹氫綅 */
+#experience-timeline>div[data-date] {
+    position: relative;
+}
+
+/* Research item wrapper: for individual research sub-items with independent image positioning */
+.research-item-wrapper {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+/* Research image positioned on the left, aligned with its subtitle */
+.research-image-left {
+    position: absolute;
+    left: -370px;
+    top: 0;
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    z-index: 5;
+}
+
+.research-image-left .research-image-item {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.research-image-left .research-image-item.zoom-image:hover {
+    transform: translateY(-6px) scale(1.08);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 #experience-timeline:before {
