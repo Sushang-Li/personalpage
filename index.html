@@ -186,6 +186,39 @@
         .vtimeline-icon {
             z-index: 99 !important;
         }
+
+        /* Course Projects two-column grid */
+        .course-projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .course-projects-grid .education-block {
+            margin: 0;
+            padding: 15px;
+            flex-direction: column;
+        }
+
+        .course-projects-grid .education-block img.zoom-image {
+            max-width: 100% !important;
+            max-height: 200px !important;
+            margin-top: 10px;
+            object-fit: contain;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .course-projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .course-projects-grid .education-block {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+        }
     </style>
 
     <!-- Vercel Web Analytics -->
@@ -840,182 +873,184 @@
         <p style="font-size: 16.5px;"><a href="https://github.com/Sushang-Li/UGCourseProjects" target="_blank">
                 Access the details of all course projects on GitHub
             </a></p>
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div>
-                <h3><strong>Java Programming</strong> | Java</h3>
-                <h4>Individual Project</h4>
-                <div class="gpa">
-                    <li style="font-size: 15px; ">
-                        Use of object-oriented techniques, file processing, and data structures to accomplish
-                        pathological sequence detection and
-                        identification of DNA base sequences of interest.
-                    </li>
+        <div class="course-projects-grid">
+            <div class="education-block" style="display: flex; align-items: center;">
+                <div>
+                    <h3><strong>Java Programming</strong> | Java</h3>
+                    <h4>Individual Project</h4>
+                    <div class="gpa">
+                        <li style="font-size: 15px; ">
+                            Use of object-oriented techniques, file processing, and data structures to accomplish
+                            pathological sequence detection and
+                            identification of DNA base sequences of interest.
+                        </li>
+                    </div>
                 </div>
+                <img src="images\CPT111.png" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
             </div>
-            <img src="images\CPT111.png" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
-        </div>
 
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div>
-                <h3><strong>Introduction to Databases</strong> | SQL</h3>
-                <h4>Group Member of the Group Project</h4>
-                <div class="gpa">
-                    <p>
+            <div class="education-block" style="display: flex; align-items: center;">
+                <div>
+                    <h3><strong>Introduction to Databases</strong> | SQL</h3>
+                    <h4>Group Member of the Group Project</h4>
+                    <div class="gpa">
+                        <p>
                         <li style="font-size: 15 px">Completion of a third-paradigm-compliant drink information dataset
                             and extension of the development of a database on drink packaging material information.</li>
-                    </p>
+                        </p>
+                    </div>
                 </div>
+                <img src="images\CPT103.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
             </div>
-            <img src="images\CPT103.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
-        </div>
 
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div>
-                <h3><strong>Artificial Intelligence</strong> | Python</h3>
-                <h4>Individual Project</h4>
-                <div class="gpa">
-                    <p>
+            <div class="education-block" style="display: flex; align-items: center;">
+                <div>
+                    <h3><strong>Artificial Intelligence</strong> | Python</h3>
+                    <h4>Individual Project</h4>
+                    <div class="gpa">
+                        <p>
                         <li style="font-size: 15 px">After performing dimensionality reduction through PCA, utilizing
                             classification methods such as CNN, SVM, and Naive Bayes, along with unsupervised learning
-                            via K-means clustering.</li>
-                    </p>
+                                via K-means clustering.</li>
+                        </p>
+                    </div>
                 </div>
+                <img src="images\INT104.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
             </div>
-            <img src="images\INT104.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
-        </div>
 
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div>
-                <h3><strong>Introduction to Computer Networking</strong> | Python</h3>
-                <h4>Group Member of the Group Project</h4>
-                <div class="gpa">
-                    <p>
-                        <li style="font-size: 15 px">Implemented a client application for user authorization, file
-                            upload, and download using Python Socket programming based on a given protocol.</li>
-                        <br>
-                        <li style="font-size: 15 px">Created a simple SDN network topology with Mininet, simulating
-                            traffic control using SDN flow tables, enabling the SDN controller to forward/redirect
-                            traffic without client awareness.</li>
-                    </p>
+            <div class="education-block" style="display: flex; align-items: center;">
+                <div>
+                    <h3><strong>Introduction to Computer Networking</strong> | Python</h3>
+                    <h4>Group Member of the Group Project</h4>
+                    <div class="gpa">
+                        <p>
+                            <li style="font-size: 15 px">Implemented a client application for user authorization, file
+                                upload, and download using Python Socket programming based on a given protocol.</li>
+                            <br>
+                            <li style="font-size: 15 px">Created a simple SDN network topology with Mininet, simulating
+                                traffic control using SDN flow tables, enabling the SDN controller to forward/redirect
+                                traffic without client awareness.</li>
+                        </p>
+                    </div>
                 </div>
+                <img src="images\CAN201.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
             </div>
-            <img src="images\CAN201.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
-        </div>
 
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div>
-                <h3><strong>Computer Graphics</strong> | C++, OpenGL</h3>
-                <h4>Individual Project</h4>
-                <div class="gpa">
-                    <p>
-                        <li style="font-size: 15 px">Created a 2D graduation invitation card using OpenGL functions,
-                            including static and dynamic objects with interactive inputs.</li>
-                        <br>
-                        <li style="font-size: 15 px">Developed a 3D school scene using OpenGL, covering geometry
-                            creation, hierarchical modeling, transformations, viewing and projection, lighting and
-                            materials, texture mapping, animation, and interaction.</li>
-                    </p>
+            <div class="education-block" style="display: flex; align-items: center;">
+                <div>
+                    <h3><strong>Computer Graphics</strong> | C++, OpenGL</h3>
+                    <h4>Individual Project</h4>
+                    <div class="gpa">
+                        <p>
+                            <li style="font-size: 15 px">Created a 2D graduation invitation card using OpenGL functions,
+                                including static and dynamic objects with interactive inputs.</li>
+                            <br>
+                            <li style="font-size: 15 px">Developed a 3D school scene using OpenGL, covering geometry
+                                creation, hierarchical modeling, transformations, viewing and projection, lighting and
+                                materials, texture mapping, animation, and interaction.</li>
+                        </p>
+                    </div>
                 </div>
+                <img src="images\CPT205.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
             </div>
-            <img src="images\CPT205.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
-        </div>
 
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div>
+            <div class="education-block" style="display: flex; align-items: center;">
+                <div>
                 <h3><strong>Software Engineering Group Project</strong> | Spring Boot, MySQL, HTML, CSS, JavaScript</h3>
-                <h4>Group Leader of the Group Project</h4>
-                <div class="gpa">
-                    <p>
-                        <li style="font-size: 15 px">
+                    <h4>Group Leader of the Group Project</h4>
+                    <div class="gpa">
+                        <p>
+                            <li style="font-size: 15 px">
                             As the group leader, I led an 8-member team to develop an integrated sports center booking
                             system using Spring Boot, based on the Model View Controller architecture, which includes
-                            both user and administrator systems consisting of 10 subsystems.
-                            I completed two full admin modules with full-stack development.
-                    </p>
-                    </li>
-                </div>
-            </div>
-            <img src="images\CPT202-2.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
-        </div>
-
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div>
-                <h3><strong>Human-Centric Computing</strong> | MoDao</h3>
-                <h4>Group Member of the Group Project</h4>
-                <div class="gpa">
-                    <p>
-                        <li style="font-size: 15 px">
-                            Collaborated in a 5-member team to complete requirement analysis, design, prototyping,
-                            evaluation, and iteration using various HCI techniques, culminating in the production of a
-                            project presentation, report, and poster, and earning an <a href="#208">Honorable
-                                Mention</a> (1 of 8).
+                                both user and administrator systems consisting of 10 subsystems.
+                                I completed two full admin modules with full-stack development.
+                        </p>
                         </li>
-                    </p>
+                    </div>
                 </div>
+                <img src="images\CPT202-2.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
             </div>
-            <img src="images\CPT208_outcome.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
-        </div>
 
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div>
-                <h3><strong>Advanced OO Programming</strong> | Java</h3>
-                <h4>Group Member of the Group Project</h4>
-                <div class="gpa">
-                    <p>
-                        <li style="font-size: 15 px">
+            <div class="education-block" style="display: flex; align-items: center;">
+                <div>
+                    <h3><strong>Human-Centric Computing</strong> | MoDao</h3>
+                    <h4>Group Member of the Group Project</h4>
+                    <div class="gpa">
+                        <p>
+                            <li style="font-size: 15 px">
+                                Collaborated in a 5-member team to complete requirement analysis, design, prototyping,
+                            evaluation, and iteration using various HCI techniques, culminating in the production of a
+                                project presentation, report, and poster, and earning an <a href="#208">Honorable
+                                    Mention</a> (1 of 8).
+                            </li>
+                        </p>
+                    </div>
+                </div>
+                <img src="images\CPT208_outcome.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
+            </div>
+
+            <div class="education-block" style="display: flex; align-items: center;">
+                <div>
+                    <h3><strong>Advanced OO Programming</strong> | Java</h3>
+                    <h4>Group Member of the Group Project</h4>
+                    <div class="gpa">
+                        <p>
+                            <li style="font-size: 15 px">
                             Collaborated with a teammate to develop a multi-agent pathfinding game using BFS, employing
                             Agile methodology, maintaining consistent code conventions, and implementing a user-friendly
-                            graphical interface.
+                                graphical interface.
                             Demonstrated algorithm superiority through interactive validation and applied comprehensive
-                            OOP principles.
-                        </li>
-                    </p>
+                                OOP principles.
+                            </li>
+                        </p>
+                    </div>
                 </div>
+                <img src="images\CPT204.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
             </div>
-            <img src="images\CPT204.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
-        </div>
 
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div>
-                <h3><strong>Big Data Analytics</strong> | Python</h3>
-                <h4>Individual Project</h4>
-                <div class="gpa">
-                    <p>
-                        <li style="font-size: 15 px">
+            <div class="education-block" style="display: flex; align-items: center;">
+                <div>
+                    <h3><strong>Big Data Analytics</strong> | Python</h3>
+                    <h4>Individual Project</h4>
+                    <div class="gpa">
+                        <p>
+                            <li style="font-size: 15 px">
                             Scraped 400 movie datasets from TMDB using BeautifulSoup. After literature reviews and idea
                             exploration, performed exploratory data analysis with visualizations of post-Hollywood film
-                            attributes. Data cleaning and preprocessing led to eight visualizations addressing the
-                            research questions, followed by hypothesis validation using PLS-SEM.
-                        </li>
-                        <br>
-                        <li style="font-size: 15 px">
-                            Developed a Random Forest model with appropriate preprocessing for multi-class
-                            classification to predict student academic trajectory. The model outperformed others,
-                            achieving superior evaluation metrics and a competitive score in a Kaggle competition.
-                        </li>
-                    </p>
+                                attributes. Data cleaning and preprocessing led to eight visualizations addressing the
+                                research questions, followed by hypothesis validation using PLS-SEM.
+                            </li>
+                            <br>
+                            <li style="font-size: 15 px">
+                                Developed a Random Forest model with appropriate preprocessing for multi-class
+                                classification to predict student academic trajectory. The model outperformed others,
+                                achieving superior evaluation metrics and a competitive score in a Kaggle competition.
+                            </li>
+                        </p>
+                    </div>
                 </div>
+                <img src="images\INT303.png" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
             </div>
-            <img src="images\INT303.png" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
-        </div>
 
-        <div class="education-block" style="display: flex; align-items: center;">
-            <div>
-                <h3><strong>Machine Learning</strong> | Python</h3>
-                <h4>Individual Project</h4>
-                <div class="gpa">
-                    <p>
-                        <li style="font-size: 15 px">
+            <div class="education-block" style="display: flex; align-items: center;">
+                <div>
+                    <h3><strong>Machine Learning</strong> | Python</h3>
+                    <h4>Individual Project</h4>
+                    <div class="gpa">
+                        <p>
+                            <li style="font-size: 15 px">
                             Improved the GECCO architecture for handwritten digit recognition on the MNIST dataset by
                             implementing three key modifications, enhancing model accuracy while reducing its size. The
-                            modified GECCO was compared with baseline models, including CNN, SpinalNet, ResNet, and
-                            Efficient-CapsNet. Results showed that the improved GECCO outperformed traditional CNN
-                            models, achieving higher accuracy, lower error rates, and a more compact parameter size.
-                        </li>
-                    </p>
+                                modified GECCO was compared with baseline models, including CNN, SpinalNet, ResNet, and
+                                Efficient-CapsNet. Results showed that the improved GECCO outperformed traditional CNN
+                                models, achieving higher accuracy, lower error rates, and a more compact parameter size.
+                            </li>
+                        </p>
+                    </div>
                 </div>
+                <img src="images\INT305.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
             </div>
-            <img src="images\INT305.jpg" class="zoom-image" style="max-width: 300px; max-height: 300px;" />
         </div>
     </div>
     <!-- End #education -->
