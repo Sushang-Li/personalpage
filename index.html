@@ -1226,9 +1226,9 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; <span id="current-year">2024</span> Mingyuan Li
+                        Copyright &copy; <span id="current-year">2026</span> Mingyuan Li
                     </p>
-                    <p>Last updated: 2025-12-15 UTC+8</p>
+                    <p id="last-updated">Last updated: loading...</p>
                     <p>
                         Acknowledgments: This project is inspired by and builds upon the work of <a
                             href="https://github.com/RyanFitzgerald/devportfolio" target="_blank">devportfolio</a>.
@@ -1364,6 +1364,31 @@
                     renderCitationBadges();
                 });
         });
+    </script>
+
+    <script>
+        // Auto-detect last updated date from GitHub's latest commit
+        (function () {
+            var repo = 'Sushang-Li/personalpage';
+            var apiUrl = 'https://api.github.com/repos/' + repo + '/commits?per_page=1';
+            var el = document.getElementById('last-updated');
+
+            fetch(apiUrl)
+                .then(function (res) {
+                    if (!res.ok) throw new Error('HTTP ' + res.status);
+                    return res.json();
+                })
+                .then(function (commits) {
+                    if (commits.length > 0) {
+                        var commitDate = new Date(commits[0].commit.committer.date);
+                        // Format as YYYY-MM-DD
+                        var yyyy = commitDate.getFullYear();
+                        var mm = String(commitDate.getMonth() + 1).padStart(2, '0');
+                        var dd = String(commitDate.getDate()).padStart(2, '0');
+                        el.textContent = 'Last updated: ' + yyyy + '-' + mm + '-' + dd;
+                    }
+                })
+        })();
     </script>
 
 </body>
