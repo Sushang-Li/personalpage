@@ -1,0 +1,22 @@
+{
+     "last_updated": "2026-03-07T05:14:00Z",
+     "author_id": "R5bjV1oAAAAJ",
+     "author_stats": {},
+     "articles": [
+          {
+               "title": "VisualCodeMOOC: A course platform for algorithms and data structures integrating a conversational agent for enhanced learning through dynamic visualizations",
+               "search_key": "VisualCodeMOOC",
+               "citations": 8
+          },
+          {
+               "title": "Patch-Based Multi-Level Attention Mechanism for Few-Shot Multi-Label Medical Image Classification",
+               "search_key": "Patch-Based Multi-Level Attention Mechanism for Few-Shot Multi-Label Medical Image Classification",
+               "citations": 0
+          },
+          {
+               "title": "Cervical Spine Fracture Detection Through Two-Stage Approach of Mask Segmentation and Windowing Based on Convolutional Neural Network",
+               "search_key": "Cervical Spine Fracture Detection Through Two-Stage Approach",
+               "citations": 5
+          }
+     ]
+}
